@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cl-violet: #7949B3;
+    --cl-red: #e73d3d;
+    --cl-orange: #e7a33d;
+    --cl-blue: #3da9e7;
+    --cl-grey: #797979;
+}
+
+.screen {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.providers {
+    display: flex;
+    flex-direction: column;
+}
+
+.provider_logo {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+.input_radio {
+    vertical-align: middle;
+}
+
+.provider_container {
+    border-bottom: 1px dashed grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.provider_container:last-child {
+    border: none;
+}
+
+.radio_container {
+    margin-top: 3px;
+    text-align: center;
+    display: flex;
+}
+
+.bars {
+    margin-left: 30px;
+    border-left: 3px solid black;
+}
+
+.bar_container {
+    display: flex;
+    align-items: center;
+}
+
+.bar {
+    height: 30px;
+    background-color: var(--cl-grey);
+    margin: 20px 0;
+    max-width: 500px;
+    transition: .5s;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+
+.bar.cl_violet {
+    background-color: var(--cl-violet);
+}
+
+.bar.cl_red {
+    background-color: var(--cl-red);
+}
+
+.bar.cl_orange {
+    background-color: var(--cl-orange);
+}
+
+.bar.cl_blue {
+    background-color: var(--cl-blue);
+}
+
+.input_range {
+    width: 400px;
+    height: 8px;
+}
+
+.price {
+    margin-left: 10px;
+}
+
+.controllers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 650px) {
+
+    .screen {
+        flex-wrap: wrap;
+    }
+
+    .providers {
+        order: 2;
+        flex-direction: row;
+        transform: translateX(-10px);
+        margin-top: 80px;
+    }
+
+    .provider_container {
+        flex-direction: column;
+        text-align: center;
+        border-bottom: 0;
+        border-right: 1px dashed grey;
+        padding: 10px;
+    }
+
+    .provider_logo {
+        width: 25px;
+        height: 25px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .bars {
+        order: 1;
+        width: 400px;
+        transform: rotate(-90deg);
+        margin-left: 0;
+    }
+
+    .bar {
+        max-width: 300px;
+    }
+
+    .input_range {
+        width: 90vw;
+    }
+
+    .radio_container {
+        flex-direction: column;
+    }
+
+}

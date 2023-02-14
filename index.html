@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <main class="screen">
+        <div class="providers" id="providers">
+            <div class="provider_container">
+                <div>
+                    <span>Backblaze</span>
+                </div>
+                <img class="provider_logo" src="./assets/img/backblaze.png" alt="Backblaze" />
+            </div>
+            <div class="provider_container">
+                <div>
+                    <span>Bunny</span>
+                    <div class="radio_container">
+                        <div>
+                            HDD <input type="radio" value="hdd" name="bunny" class="input_radio" checked />
+                        </div>
+                        <div>
+                            SSD <input type="radio" value="ssd" name="bunny" class="input_radio" />
+                        </div>
+                    </div>
+                </div>
+                <img class="provider_logo" src="./assets/img/bunny.jpg" alt="Bunny" />
+            </div>
+            <div class="provider_container">
+                <div>
+                    <span>Scaleway</span>
+                    <div class="radio_container">
+                        <div>
+                            Multi <input type="radio" value="multi" name="scaleway" class="input_radio" checked />
+                        </div>
+                        <div>
+                            Single <input type="radio" value="single" name="scaleway" class="input_radio" />
+                        </div>
+                    </div>
+                </div>
+                <img class="provider_logo" src="./assets/img/scaleway.png" alt="Scaleway" />
+            </div>
+            <div class="provider_container">
+                <div>
+                    <span>Vultr</span>
+                </div>
+                <img class="provider_logo" src="./assets/img/vultr.png" alt="Vultr" />
+            </div>
+        </div>
+        <div class="bars">
+            <div class="bar_container">
+                <div id="backblaze" class="bar" style="width: 0px;"></div>
+                <span id="backblaze_price" class="price">0$</span>
+            </div>
+            <div class="bar_container">
+                <div id="bunny" class="bar" style="width: 0px;"></div>
+                <span id="bunny_price" class="price">0$</span>
+            </div>
+            <div class="bar_container">
+                <div id="scaleway" class="bar" style="width: 0px;"></div>
+                <span id="scaleway_price" class="price">0$</span>
+            </div>
+            <div class="bar_container">
+                <div id="vultr" class="bar" style="width: 0px;"></div>
+                <span id="vultr_price" class="price">0$</span>
+            </div>
+        </div>
+    </main>
+    <div class="controllers">
+        <div class="control_storage">
+            Storage:
+            <span id="storage_memory" class="memory">0</span> GB
+            <br>
+            <input id="storage" class="input_range" type="range" min="0" max="1000" step="1" value="0" />
+        </div>
+        <div class="control_storage">
+            Transfer:
+            <span id="transfer_memory" class="memory">0</span> GB
+            <br>
+            <input id="transfer" class="input_range" type="range" min="0" max="1000" step="1" value="0" />
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
